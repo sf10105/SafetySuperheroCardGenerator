@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		17A035B82DF3E16F005C3CCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17A035A22DF3E16A005C3CCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17A035A92DF3E16A005C3CCB;
+			remoteInfo = SafetySuperheroCard;
+		};
+		17A035C22DF3E16F005C3CCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17A035A22DF3E16A005C3CCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17A035A92DF3E16A005C3CCB;
+			remoteInfo = SafetySuperheroCard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17A035AA2DF3E16A005C3CCB /* SafetySuperheroCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafetySuperheroCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A035B72DF3E16F005C3CCB /* SafetySuperheroCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafetySuperheroCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A035C12DF3E16F005C3CCB /* SafetySuperheroCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafetySuperheroCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		17A0360B2DF41322005C3CCB /* Exceptions for "SafetySuperheroCard" folder in "SafetySuperheroCard" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 17A035A92DF3E16A005C3CCB /* SafetySuperheroCard */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		17A035AC2DF3E16A005C3CCB /* SafetySuperheroCard */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				17A0360B2DF41322005C3CCB /* Exceptions for "SafetySuperheroCard" folder in "SafetySuperheroCard" target */,
+			);
+			path = SafetySuperheroCard;
+			sourceTree = "<group>";
+		};
+		17A035BA2DF3E16F005C3CCB /* SafetySuperheroCardTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SafetySuperheroCardTests;
+			sourceTree = "<group>";
+		};
+		17A035C42DF3E16F005C3CCB /* SafetySuperheroCardUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SafetySuperheroCardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17A035A72DF3E16A005C3CCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A035B42DF3E16F005C3CCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A035BE2DF3E16F005C3CCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17A035A12DF3E16A005C3CCB = {
+			isa = PBXGroup;
+			children = (
+				17A035AC2DF3E16A005C3CCB /* SafetySuperheroCard */,
+				17A035BA2DF3E16F005C3CCB /* SafetySuperheroCardTests */,
+				17A035C42DF3E16F005C3CCB /* SafetySuperheroCardUITests */,
+				17A035AB2DF3E16A005C3CCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17A035AB2DF3E16A005C3CCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17A035AA2DF3E16A005C3CCB /* SafetySuperheroCard.app */,
+				17A035B72DF3E16F005C3CCB /* SafetySuperheroCardTests.xctest */,
+				17A035C12DF3E16F005C3CCB /* SafetySuperheroCardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17A035A92DF3E16A005C3CCB /* SafetySuperheroCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17A035CB2DF3E16F005C3CCB /* Build configuration list for PBXNativeTarget "SafetySuperheroCard" */;
+			buildPhases = (
+				17A035A62DF3E16A005C3CCB /* Sources */,
+				17A035A72DF3E16A005C3CCB /* Frameworks */,
+				17A035A82DF3E16A005C3CCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				17A035AC2DF3E16A005C3CCB /* SafetySuperheroCard */,
+			);
+			name = SafetySuperheroCard;
+			packageProductDependencies = (
+			);
+			productName = SafetySuperheroCard;
+			productReference = 17A035AA2DF3E16A005C3CCB /* SafetySuperheroCard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17A035B62DF3E16F005C3CCB /* SafetySuperheroCardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17A035CE2DF3E16F005C3CCB /* Build configuration list for PBXNativeTarget "SafetySuperheroCardTests" */;
+			buildPhases = (
+				17A035B32DF3E16F005C3CCB /* Sources */,
+				17A035B42DF3E16F005C3CCB /* Frameworks */,
+				17A035B52DF3E16F005C3CCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17A035B92DF3E16F005C3CCB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				17A035BA2DF3E16F005C3CCB /* SafetySuperheroCardTests */,
+			);
+			name = SafetySuperheroCardTests;
+			packageProductDependencies = (
+			);
+			productName = SafetySuperheroCardTests;
+			productReference = 17A035B72DF3E16F005C3CCB /* SafetySuperheroCardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17A035C02DF3E16F005C3CCB /* SafetySuperheroCardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17A035D12DF3E16F005C3CCB /* Build configuration list for PBXNativeTarget "SafetySuperheroCardUITests" */;
+			buildPhases = (
+				17A035BD2DF3E16F005C3CCB /* Sources */,
+				17A035BE2DF3E16F005C3CCB /* Frameworks */,
+				17A035BF2DF3E16F005C3CCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17A035C32DF3E16F005C3CCB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				17A035C42DF3E16F005C3CCB /* SafetySuperheroCardUITests */,
+			);
+			name = SafetySuperheroCardUITests;
+			packageProductDependencies = (
+			);
+			productName = SafetySuperheroCardUITests;
+			productReference = 17A035C12DF3E16F005C3CCB /* SafetySuperheroCardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17A035A22DF3E16A005C3CCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					17A035A92DF3E16A005C3CCB = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					17A035B62DF3E16F005C3CCB = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 17A035A92DF3E16A005C3CCB;
+					};
+					17A035C02DF3E16F005C3CCB = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 17A035A92DF3E16A005C3CCB;
+					};
+				};
+			};
+			buildConfigurationList = 17A035A52DF3E16A005C3CCB /* Build configuration list for PBXProject "SafetySuperheroCard" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17A035A12DF3E16A005C3CCB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 17A035AB2DF3E16A005C3CCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17A035A92DF3E16A005C3CCB /* SafetySuperheroCard */,
+				17A035B62DF3E16F005C3CCB /* SafetySuperheroCardTests */,
+				17A035C02DF3E16F005C3CCB /* SafetySuperheroCardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17A035A82DF3E16A005C3CCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A035B52DF3E16F005C3CCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A035BF2DF3E16F005C3CCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17A035A62DF3E16A005C3CCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A035B32DF3E16F005C3CCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A035BD2DF3E16F005C3CCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17A035B92DF3E16F005C3CCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17A035A92DF3E16A005C3CCB /* SafetySuperheroCard */;
+			targetProxy = 17A035B82DF3E16F005C3CCB /* PBXContainerItemProxy */;
+		};
+		17A035C32DF3E16F005C3CCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17A035A92DF3E16A005C3CCB /* SafetySuperheroCard */;
+			targetProxy = 17A035C22DF3E16F005C3CCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		17A035C92DF3E16F005C3CCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17A035CA2DF3E16F005C3CCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17A035CC2DF3E16F005C3CCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SafetySuperheroCard/SafetySuperheroCard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U2U49KFN95;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SafetySuperheroCard/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarahfox.SafetySuperheroCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17A035CD2DF3E16F005C3CCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SafetySuperheroCard/SafetySuperheroCard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U2U49KFN95;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SafetySuperheroCard/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarahfox.SafetySuperheroCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17A035CF2DF3E16F005C3CCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarahfox.SafetySuperheroCardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SafetySuperheroCard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SafetySuperheroCard";
+			};
+			name = Debug;
+		};
+		17A035D02DF3E16F005C3CCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarahfox.SafetySuperheroCardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SafetySuperheroCard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SafetySuperheroCard";
+			};
+			name = Release;
+		};
+		17A035D22DF3E16F005C3CCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarahfox.SafetySuperheroCardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SafetySuperheroCard;
+			};
+			name = Debug;
+		};
+		17A035D32DF3E16F005C3CCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarahfox.SafetySuperheroCardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SafetySuperheroCard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17A035A52DF3E16A005C3CCB /* Build configuration list for PBXProject "SafetySuperheroCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A035C92DF3E16F005C3CCB /* Debug */,
+				17A035CA2DF3E16F005C3CCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17A035CB2DF3E16F005C3CCB /* Build configuration list for PBXNativeTarget "SafetySuperheroCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A035CC2DF3E16F005C3CCB /* Debug */,
+				17A035CD2DF3E16F005C3CCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17A035CE2DF3E16F005C3CCB /* Build configuration list for PBXNativeTarget "SafetySuperheroCardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A035CF2DF3E16F005C3CCB /* Debug */,
+				17A035D02DF3E16F005C3CCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17A035D12DF3E16F005C3CCB /* Build configuration list for PBXNativeTarget "SafetySuperheroCardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A035D22DF3E16F005C3CCB /* Debug */,
+				17A035D32DF3E16F005C3CCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17A035A22DF3E16A005C3CCB /* Project object */;
+}
