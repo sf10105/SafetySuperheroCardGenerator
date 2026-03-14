@@ -58,7 +58,6 @@ struct ExportView: View {
         "Fork Lifter": "Forklift Icon",
         "A Grade Forklifter": "A Grade Forklifter",
         "B Grade Forklifter": "B Grade Forklifter",
-        "Forklift Coach": "Gold Star",
         "Return to Work Organiser": "Return To Work Organiser",
         "Walkie Stacker Operator": "Walkie Symbol"
     ]
@@ -67,8 +66,85 @@ struct ExportView: View {
         ["Complex Manager": "Complex Manager Playing Card"][level] ?? "Complex Manager Playing Card"
     }
 
-    private var iconNames: [String] {
-        qualifications.compactMap { qualificationIcons[$0] }
+    private var iconDisplayItems: [IconDisplayItem] {
+        var items: [IconDisplayItem] = []
+
+        let hasForkliftCoach = qualifications.contains("Forklift Coach")
+
+        for qualification in qualifications {
+            switch qualification {
+            case "A Grade Forklifter":
+                items.append(
+                    IconDisplayItem(
+                        baseIconName: "A Grade Forklifter",
+                        overlayIconName: hasForkliftCoach ? "Gold Star" : nil
+                    )
+                )
+
+            case "B Grade Forklifter":
+                items.append(
+                    IconDisplayItem(
+                        baseIconName: "B Grade Forklifter",
+                        overlayIconName: hasForkliftCoach ? "Gold Star" : nil
+                    )
+                )
+
+            case "Forklift Coach":
+                // Don't add a separate icon for this
+                break
+
+            default:
+                if let iconName = qualificationIcons[qualification] {
+                    items.append(
+                        IconDisplayItem(
+                            baseIconName: iconName,
+                            overlayIconName: nil
+                        )
+                    )
+                }
+            }
+        }
+
+        return items
+    }
+    
+    private var bulletLines: [String] {
+        var lines: [String] = []
+        let hasCoach = qualifications.contains("Forklift Coach")
+
+        for q in qualifications {
+            switch q {
+
+            case "A Grade Forklifter":
+                if hasCoach {
+                    lines.append("A GRADE FORKLIFTER - FORKLIFT COACH")
+                } else {
+                    lines.append("A GRADE FORKLIFTER")
+                }
+
+            case "B Grade Forklifter":
+                if hasCoach {
+                    lines.append("B GRADE FORKLIFTER - FORKLIFT COACH")
+                } else {
+                    lines.append("B GRADE FORKLIFTER")
+                }
+
+            case "Forklift Coach":
+                // Skip — handled above
+                break
+
+            default:
+                lines.append(q.uppercased())
+            }
+        }
+
+        return lines
+    }
+    
+    private struct IconDisplayItem: Identifiable {
+        let id = UUID()
+        let baseIconName: String
+        let overlayIconName: String?
     }
 
     var body: some View {
@@ -167,30 +243,44 @@ struct ExportView: View {
                         .offset(x: textLeftX, y: positionTopY)
 
                     // Build icon images
-                    let iconImages: [UIImage] = iconNames.compactMap {
-                        normalizedIconTightCached(named: $0, target: iconSize, edgeBleed: edgeBleed)
+                    let iconImages: [UIImage] = iconDisplayItems.compactMap {
+                        iconDisplayImage(baseName: $0.baseIconName, overlayName: $0.overlayIconName)
                     }
 
-                    // Dynamic spacing with overlap if needed
-                    let maxRowWidth = canvasSize.width - iconsLeftX - rightPadding
+                    // Keep a small gap up to 4 icons, then begin overlapping if needed to stay within the frame
+                    let frameMaxWidth = canvasSize.width - iconsLeftX - rightPadding
+                    let rowWidthCap = min(frameMaxWidth, iconSize * 4.8)
                     let n = iconImages.count
-                    let idealWidth = CGFloat(n) * iconSize + CGFloat(max(0, n - 1)) * iconGap
-                    let overlapPerGap = max(0, idealWidth - maxRowWidth) / CGFloat(max(1, n - 1))
-                    let minSpacing = -iconSize * 0.6       // keep at least 40% visible
-                    let effectiveSpacing = max(iconGap - overlapPerGap, minSpacing)
+
+                    let normalGap: CGFloat = 16
+                    let minSpacing: CGFloat = -iconSize * 0.6
+
+                    let effectiveSpacing: CGFloat = {
+                        guard n > 1 else { return 0 }
+
+                        if n <= 4 {
+                            return normalGap
+                        }
+
+                        let spacingToFit = (rowWidthCap - CGFloat(n) * iconSize) / CGFloat(n - 1)
+                        return max(spacingToFit, minSpacing)
+                    }()
+                    
+                    let iconCanvasExtraTop: CGFloat = iconSize * 0.28
+                    let iconCanvasHeight = iconSize + iconCanvasExtraTop
 
                     HStack(spacing: effectiveSpacing) {
                         ForEach(iconImages.indices, id: \.self) { i in
                             Image(uiImage: iconImages[i])
-                                .frame(width: iconSize, height: iconSize)
+                                .frame(width: iconSize, height: iconCanvasHeight, alignment: .topLeading)
                         }
                     }
-                    .offset(x: iconsLeftX, y: iconsTopY)
+                    .offset(x: iconsLeftX, y: iconsTopY - iconCanvasExtraTop)
 
                     let bulletsTop = max(minBulletsTopY, iconsTopY + iconSize + 48)
                     VStack(alignment: .leading, spacing: 0) {
-                        ForEach(qualifications, id: \.self) { q in
-                            Text("• \(q.uppercased())")
+                        ForEach(bulletLines, id: \.self) { line in
+                            Text("• \(line)")
                                 .font(bulletFontSwiftUI)
                                 .foregroundColor(.white)
                                 .frame(height: 132.98, alignment: .topLeading)
@@ -250,6 +340,44 @@ struct ExportView: View {
         IconCache.shared.setObject(img, forKey: key)
         return img
     }
+    
+    private func iconDisplayImage(baseName: String, overlayName: String?) -> UIImage? {
+        guard let base = normalizedIconTightCached(named: baseName, target: iconSize, edgeBleed: edgeBleed) else {
+            return nil
+        }
+
+        let extraTop: CGFloat = iconSize * 0.28
+        let canvasWidth = iconSize
+        let canvasHeight = iconSize + extraTop
+        
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: canvasWidth, height: canvasHeight))
+        return renderer.image { _ in
+            guard let ctx = UIGraphicsGetCurrentContext() else { return }
+
+            // Draw every base icon in the same position
+            let baseRect = CGRect(x: 0, y: extraTop, width: iconSize, height: iconSize)
+            base.draw(in: baseRect)
+
+            // Only add the badge when needed
+            if let overlayName,
+               let overlay = normalizedIconTightCached(named: overlayName, target: iconSize, edgeBleed: edgeBleed) {
+
+                let starSize: CGFloat = iconSize * 0.48
+                let starX = iconSize - starSize * 1.02
+                let starY = extraTop - starSize * 0.2
+                let starRect = CGRect(x: starX, y: starY, width: starSize, height: starSize)
+
+                ctx.saveGState()
+                ctx.setShadow(
+                    offset: CGSize(width: 0, height: 6),
+                    blur: 10,
+                    color: UIColor.black.withAlphaComponent(0.45).cgColor
+                )
+                overlay.draw(in: starRect)
+                ctx.restoreGState()
+            }
+        }
+    }
 
     private func setInitialPhotoState() {
         currentScale = 1.0
@@ -297,21 +425,41 @@ struct ExportView: View {
             ]
             position.uppercased().draw(at: CGPoint(x: textLeftX, y: positionTopY), withAttributes: posAttrs)
 
-            let images: [UIImage] = iconNames.compactMap {
-                normalizedIconTightCached(named: $0, target: iconSize, edgeBleed: edgeBleed)
+            let images: [UIImage] = iconDisplayItems.compactMap {
+                iconDisplayImage(baseName: $0.baseIconName, overlayName: $0.overlayIconName)
             }
-
+            
             // Match SwiftUI preview spacing logic for export
-            let maxRowWidth = canvasSize.width - iconsLeftX - rightPadding
+            let frameMaxWidth = canvasSize.width - iconsLeftX - rightPadding
+            let rowWidthCap = min(frameMaxWidth, iconSize * 4.8)
             let n = images.count
-            let idealWidth = CGFloat(n) * iconSize + CGFloat(max(0, n - 1)) * iconGap
-            let overlapPerGap = max(0, idealWidth - maxRowWidth) / CGFloat(max(1, n - 1))
-            let minSpacing = -iconSize * 0.6
-            let effectiveSpacing = max(iconGap - overlapPerGap, minSpacing)
+
+            let normalGap: CGFloat = 16
+            let minSpacing: CGFloat = -iconSize * 0.6
+
+            let effectiveSpacing: CGFloat = {
+                guard n > 1 else { return 0 }
+
+                if n <= 4 {
+                    return normalGap
+                }
+
+                let spacingToFit = (rowWidthCap - CGFloat(n) * iconSize) / CGFloat(n - 1)
+                return max(spacingToFit, minSpacing)
+            }()
+
+            let iconCanvasExtraTop: CGFloat = iconSize * 0.28
+            let iconCanvasWidth = iconSize
+            let iconCanvasHeight = iconSize + iconCanvasExtraTop
 
             var x = iconsLeftX
             for img in images {
-                img.draw(in: CGRect(x: x, y: iconsTopY, width: iconSize, height: iconSize))
+                img.draw(in: CGRect(
+                    x: x,
+                    y: iconsTopY - iconCanvasExtraTop,
+                    width: iconCanvasWidth,
+                    height: iconCanvasHeight
+                ))
                 x += iconSize + effectiveSpacing
             }
 
@@ -320,8 +468,8 @@ struct ExportView: View {
                 .font: bulletFontUIKit, .foregroundColor: UIColor.white
             ]
             var bulletY = bulletsTop
-            for q in qualifications {
-                ("• " + q.uppercased()).draw(at: CGPoint(x: 149.2, y: bulletY), withAttributes: bulletAttrs)
+            for line in bulletLines {
+                ("• " + line).draw(at: CGPoint(x: 149.2, y: bulletY), withAttributes: bulletAttrs)
                 bulletY += 132.98
             }
         }
