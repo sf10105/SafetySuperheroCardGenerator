@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safety Superhero Card Generator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="control-panel" aria-label="Card details">
+        <header class="app-header">
+          <p class="eyebrow">Safety Superhero</p>
+          <h1>Card Generator</h1>
+        </header>
+
+        <form id="cardForm" class="card-form">
+          <label class="field">
+            <span>First Name</span>
+            <input id="firstName" name="firstName" type="text" autocomplete="given-name" required />
+          </label>
+
+          <label class="field">
+            <span>Level</span>
+            <select id="levelSelect" name="level" required>
+              <option value="">Select a position</option>
+            </select>
+          </label>
+
+          <label id="roleField" class="field is-hidden">
+            <span id="roleLabel">Role</span>
+            <select id="roleSelect" name="role"></select>
+          </label>
+
+          <section class="form-section" aria-labelledby="qualificationHeading">
+            <h2 id="qualificationHeading">Qualifications</h2>
+            <div id="qualificationList" class="qualification-list"></div>
+          </section>
+
+          <div class="form-actions">
+            <button id="exportButton" class="primary-button" type="button" disabled>Export PNG</button>
+            <button id="resetFormButton" class="secondary-button danger" type="button">Reset Form</button>
+          </div>
+
+          <p id="formStatus" class="form-status">Name, role, and at least one qualification are required.</p>
+        </form>
+      </section>
+
+      <section class="preview-panel" aria-label="Card preview">
+        <div class="preview-frame">
+          <canvas id="cardCanvas" width="3005" height="4349"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
