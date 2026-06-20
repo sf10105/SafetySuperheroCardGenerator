@@ -122,7 +122,7 @@ const FIRE_WARDEN_SHADOW = "rgba(184, 13, 158, 0.65)";
 
 const state = {
   firstName: "",
-  level: DEFAULT_PREVIEW_LEVEL,
+  level: "",
   role: "",
   selectedQualifications: new Set(),
   forkliftGrade: "B",
@@ -223,7 +223,7 @@ function populateLevelMenu() {
     dom.levelSelect.append(option);
   }
 
-  dom.levelSelect.value = state.level;
+  dom.levelSelect.value = "";
 }
 
 function updateRoleMenu() {
@@ -704,7 +704,7 @@ function render() {
 
 function resetForm() {
   state.firstName = "";
-  state.level = DEFAULT_PREVIEW_LEVEL;
+  state.level = "";
   state.role = "";
   state.selectedQualifications.clear();
   state.forkliftGrade = "B";
@@ -713,7 +713,7 @@ function resetForm() {
   state.fireWardenRole = "Fire Warden";
 
   dom.firstName.value = "";
-  dom.levelSelect.value = state.level;
+  dom.levelSelect.value = "";
   updateRoleMenu();
   renderQualificationControls();
   render();
