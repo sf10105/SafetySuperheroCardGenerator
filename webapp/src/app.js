@@ -437,7 +437,7 @@ function createInlineCheckbox(text, checked, onChange) {
 function updateFormState() {
   const ready = canExport();
   dom.exportButton.disabled = !ready;
-  dom.formStatus.textContent = ready ? "Ready to export. No photo is collected or included." : "Name, role, and at least one qualification are required.";
+  dom.formStatus.textContent = ready ? "Ready to export." : "Name, role, and at least one qualification are required.";
   dom.formStatus.classList.toggle("is-ready", ready);
 }
 
