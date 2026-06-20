@@ -1,4 +1,5 @@
 const CANVAS_SIZE = { width: 3005, height: 4349 };
+const DEFAULT_PREVIEW_LEVEL = "Team Member";
 
 const TEXT = {
   leftX: 156.33,
@@ -684,8 +685,8 @@ function drawIcons(context) {
 }
 
 function drawFrame(context) {
-  const level = state.level || "Complex Manager";
-  const frame = images[`frame:${level}`] || images["frame:Complex Manager"];
+  const level = state.level || DEFAULT_PREVIEW_LEVEL;
+  const frame = images[`frame:${level}`] || images[`frame:${DEFAULT_PREVIEW_LEVEL}`];
   context.drawImage(frame, 0, 0, CANVAS_SIZE.width, CANVAS_SIZE.height);
 }
 
